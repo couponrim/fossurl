@@ -13,7 +13,7 @@ let cinp = () => {
     document.getElementById("erbox").innerHTML = "";
     let cival = document.getElementById("custominput").value;
 
-    let res = JSON.parse(fetchJSON(endpoint + '/?q=s:' + cival))[0]["l"];
+    let res = JSON.parse(fetchJSON(endpoint + '/?q=s:' + cival))[0];
     let data = res;
 
 
@@ -49,6 +49,7 @@ let genhash = () => {
         check_is_unique();
     } else {
         window.location.hash = document.getElementById("custominput").value;
+           check_is_unique();
 
     }
 };
